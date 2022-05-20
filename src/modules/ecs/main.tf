@@ -139,8 +139,9 @@ resource "aws_security_group" "sg_django" {
 }
 
 resource "aws_ecr_repository" "ecr_simetrik" {
-  name                 = "ECR_DevOps"
+  name                 = "ecrdevops"
   image_tag_mutability = "MUTABLE"
+
 
   image_scanning_configuration {
     scan_on_push = true
