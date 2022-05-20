@@ -1,5 +1,5 @@
 ---
-name: terraform plan
+name: terraform plan - apply
 
 on:
   push:
@@ -32,5 +32,7 @@ jobs:
       run: terraform init
     - name: Terraform Plan
       run: terraform plan -input=false -compact-warnings -var-file=prueba-simetrik.tfvars -out=tfplan
+    - name: Terraform Apply
+      run: terraform apply -input=false -compact-warnings -var-file=prueba-simetrik.tfvars -auto-approve
       
 
