@@ -2,7 +2,7 @@
 name: terraform plan
 
 on:
-  pull_request:
+  push:
     branches:
       - main
 
@@ -22,7 +22,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-2
+        aws-region: us-east-1
     - name: Setup Terraform
       uses: hashicorp/setup-terraform@v1
       with:
@@ -31,6 +31,6 @@ jobs:
     - name: Terraform Init
       run: terraform init
     - name: Terraform Plan
-      run: terraform plan -input=false -compact-warnings -var-file=develop.auto.tfvars -out=tfplan
+      run: terraform plan -input=false -compact-warnings -var-file=prueba-simetrik.tfvars -out=tfplan
       
 
