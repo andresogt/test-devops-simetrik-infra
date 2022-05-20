@@ -34,6 +34,10 @@ resource "aws_ecs_task_definition" "task-def" {
     operating_system_family = "LINUX"
     cpu_architecture        = "X86_64"
   }
+
+  lifecycle {
+    ignore_changes = all
+  }
 }
 
 resource "aws_ecs_service" "service-django" {
