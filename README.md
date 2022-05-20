@@ -1,2 +1,1 @@
-# akimbo
-Akimbo IaC Terraform
+Simetrik prueba DevOps
