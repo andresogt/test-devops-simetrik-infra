@@ -139,7 +139,7 @@ resource "aws_security_group" "sg_django" {
 }
 
 resource "aws_ecr_repository" "ecr_simetrik" {
-  name                 = "${var.ecr_name}"
+  name                 = var.ecr_name
   image_tag_mutability = "MUTABLE"
 
   image_scanning_configuration {
