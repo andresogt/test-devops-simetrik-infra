@@ -99,7 +99,7 @@ resource "aws_eip" "eip_1" {
   vpc = true
 
   tags = {
-    "Name" = "Elastic IP for NAT gw"
+    "Name" = "Elastic IP para NAT gw"
   }
 }
 
@@ -116,7 +116,7 @@ resource "aws_eip" "eip_2" {
   vpc = true
 
   tags = {
-    "Name" = "Elastic IP for NAT gw"
+    "Name" = "Elastic IP para NAT gw"
   }
 }
 
