@@ -22,4 +22,5 @@ variable "tags" {
 variable "container_port" {
 }
 
-
+variable "ecr_name" {
+}

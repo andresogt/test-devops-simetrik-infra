@@ -19,4 +19,5 @@ module "ecs" {
     public_subnet1_id   = module.network.public_subnet1_id
     public_subnet2_id   = module.network.public_subnet2_id
     container_port       = var.container_port
+    ecr_name             = var.ecr_name
 }

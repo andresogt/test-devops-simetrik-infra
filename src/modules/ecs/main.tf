@@ -137,3 +137,12 @@ resource "aws_security_group" "sg_django" {
     Name = "Security group Prueba Simetrik"
   }
 }
+
+resource "aws_ecr_repository" "ecr_simetrik" {
+  name                 = "${var.ecr_name}"
+  image_tag_mutability = "MUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+}
