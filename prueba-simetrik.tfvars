@@ -10,4 +10,4 @@ tags                 = "VPC Prueba Simetrik DevOps"
 
 #ECS Module
 container_port             = "8000"
-ecr_name                   = "Repositorio_ECR_DevOps"
+ecr_name                   = "RepositorioECRDevOps"
